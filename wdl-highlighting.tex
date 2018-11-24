@@ -1,0 +1,47 @@
+\usepackage{listings, xcolor}
+
+\definecolor{commentgreen}{RGB}{139,152,171}
+\definecolor{keywords2teal}{RGB}{0,160,160}
+
+\lstdefinelanguage{WDL}{
+	keywords=[1]{true, false, in, length, while, call, runtime, task, workflow, if, then, else, import, as, input, output, meta, parameter_meta, scatter}, % generic keywords
+	keywordstyle=[1]\color{violet!85}\bfseries,
+	keywords=[2]{Array, Boolean, File, Float, Int, Map, Object, String, Pair},	% types
+	keywordstyle=[2]\color{keywords2teal}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	commentstyle=\color{gray}\ttfamily,
+	stringstyle=\color{orange}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstset{
+	language=WDL,
+  backgroundcolor=\color{lapislazuli!3},
+	extendedchars=true,
+	basicstyle=\small\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=9pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b,
+  frame=single, %⟨none|leftline|topline|bottomline|lines|single|shadowbox⟩
+  framesep=2pt,
+  framerule=1pt,
+  frameround=ffft,
+  rulecolor=\color{lapislazuli!80!black},
+  upquote=false,
+  flexiblecolumns=true,
+  basewidth={0.6em,0.45em},
+  fontadjust=true,
+  breaklines,
+  extendedchars=false,
+  xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+  %belowcaptionskip=1\baselineskip
+}
